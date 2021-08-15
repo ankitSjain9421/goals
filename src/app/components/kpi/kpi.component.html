@@ -1,0 +1,151 @@
+<div class="table-responsive">
+  <!-- <button class="previous"  (click)="openDialog('Add',{})"  style=" background-color: #969696;"><span style="color: white;" >Add Row</span></button>-->
+  <a (click)="openDialog('Add',{})" style="margin-bottom:10px;" class="previous pointer">New Record</a>&nbsp;&nbsp;
+  <a (click)="goToDashboard()" *ngIf="isDashboardAvailable()" style="margin-bottom:10px;"
+    class="previous pointer">Dashboard</a>&nbsp;&nbsp;
+    <a [routerLink]="['']" style="margin-bottom:10px;"
+      class="previous pointer">Home</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <h2 style="display: inline-block;">Welcome {{EmployeeName}} ( {{EmployeeId}} ) to your kPIs.</h2>
+  <br>
+  <table mat-table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+         The actual rendered columns are set as a property on the row definition" -->
+    <!-- Name Column -->
+    <ng-container matColumnDef="ID">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> S. No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.index}} </td>
+    </ng-container>
+    <!-- Id Column -->
+   <!-- <ng-container matColumnDef="Department">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Department </th>
+      <td mat-cell *matCellDef="let element"> {{element.Department}} </td>
+    </ng-container>-->
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Relevance">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Relevance </th>
+      <td mat-cell *matCellDef="let element"> {{element.Relevance}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Code">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Code </th>
+      <td mat-cell *matCellDef="let element"> {{element.Code}} </td>
+    </ng-container>
+    <!-- Id Column -->
+    <ng-container matColumnDef="Core_x0020_Values">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Core Values </th>
+      <td mat-cell *matCellDef="let element"> {{element.Core_x0020_Values}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Levels">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Levels </th>
+      <td mat-cell *matCellDef="let element"> {{element.Levels}} </td>
+    </ng-container> <!-- Id Column -->
+    <ng-container matColumnDef="Category">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Category </th>
+      <td mat-cell *matCellDef="let element"> {{element.Category}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="KPI">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> KPI </th>
+      <td  mat-cell *matCellDef="let element"  style="white-space: pre-wrap !important; flex: 0 0 25% !important;min-width: 500px !important;" id="id">       
+        <p class="c"> {{element.KPI}}  </p>    
+      </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Impact">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Impact/Output </th>
+      <td mat-cell *matCellDef="let element"> {{element.Impact}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Plan">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Plan </th>
+      <td mat-cell *matCellDef="let element"> {{element.Plan}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="Weightage">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);">Weightage </th>
+      <td mat-cell *matCellDef="let element"> {{element.Weightage}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="Metric">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Metric </th>
+      <td mat-cell *matCellDef="let element"> {{element.Metric}} </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="RatingDefination">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Rating Defination for 2 </th>
+      <td mat-cell *matCellDef="let element"> {{element.RatingDefination}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="RatingDefinationThree">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Rating Defination for 3 </th>
+      <td mat-cell *matCellDef="let element"> {{element.RatingDefinationThree}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="RatingDefinationFour">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Rating Defination for 4 </th>
+      <td mat-cell *matCellDef="let element"> {{element.RatingDefinationFour}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Time">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Time </th>
+      <td mat-cell *matCellDef="let element"> {{element.Time  | date : "dd/MM/yyyy"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="MidYearRating">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Mid Year Self Rating </th>
+      <td mat-cell *matCellDef="let element"> {{element.MidYearRating}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="AnnualYearRating">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Annual Self Rating </th>
+      <td mat-cell *matCellDef="let element"> {{element.AnnualYearRating}} </td>
+    </ng-container>
+    <!-- file Column -->
+    <ng-container matColumnDef="file">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);"> Document Reference </th>
+      <td mat-cell *matCellDef="let element">
+        <ul *ngFor="let file of element.fileNames">
+          <a mat-icon-button [href]="getFileUrl(element,file)" [attr.download]="file" title="download {{ file }}">
+            <mat-icon inline>get_app</mat-icon>
+            {{file}}
+          </a>
+          <!-- <a role="button" (click)="getFileUrl(element,file)" download>{{file}}</a>
+                    <span id="file-label">        
+                    </span>
+                 -->
+        </ul>
+      </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef style="background-color: rgb(175, 173, 172);">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action </th>
+      <td mat-cell *matCellDef="let element" class="action-link">
+        <a (click)="openDialog('Update',element)" class="pointer"><i class="material-icons">edit</i></a>
+        <a (click)="openDialog('Delete',element)" class="pointer"><i class="material-icons">delete</i></a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<a (click)="onPrevious()" class="previous pointer">&laquo; Previous</a>

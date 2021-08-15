@@ -1,0 +1,89 @@
+<!-- dialog-box.component.html -->
+
+<div mat-dialog-content>
+ 
+
+  <!--<div class="line">
+    <div class="col-md-6 quad" style="background-color:blue;"><div class="div-custom">     
+    <h1>Dashboard reflecting your Department's progress.</h1>
+   <div id="chart_div" style="height:500px; width:100%;"></div></div>
+      <div class="col-md-6 quad" style="background-color:red;"> <div class="div-custom">     
+     <h1>Your Department's Mid Year progress.</h1>
+    <div id="chart_div_rating_mid" style="height:500px; width:100%;"></div></div>
+      <div class="col-md-6 quad" style="background-color:yellow;">  <div class="div-custom">     
+     <h1>Your Department's Annual progress.</h1>
+    <div id="chart_div_rating_annual" style="height:500px; width:100%;"></div></div>
+      <div class="col-md-6 quad" style="background-color:green;">test</div>
+  </div>-->
+
+  <mat-grid-list cols="2" rowHeight="1:1"> 
+	
+    <mat-grid-tile >
+      <div class="div-custom">     
+        <h5>Dashboard reflecting your Department's progress.</h5>
+       <div id="chart_div" style="height:350px; width:350px;"></div>
+       </div>
+    </mat-grid-tile> 
+    <mat-grid-tile>     
+      <div class="div-custom" style="padding-bottom: 105px;">     
+        <h5>Your Department's Mid Year progress.</h5>
+       <div id="chart_div_rating_mid" style="height:250px; width:250px;"></div>     
+	   </div>
+      
+      <form>
+        <div>
+          <label for="name">Rating 2</label>
+          <div class="foo blue"></div>
+        </div>
+        <div>
+          <label for="lastname">Rating 3</label>
+          <div class="foo purple"> </div>
+        </div>
+        <div>
+          <label for="lastname">Rating 4</label>
+          <div class="foo wine"> </div>
+        </div>
+        
+      </form>
+     
+       
+    </mat-grid-tile> 
+   
+    
+    </mat-grid-list> 
+   
+
+    <mat-grid-list cols="2" rowHeight="1:1"> 
+	
+     
+      <mat-grid-tile colspan="2">
+        <div class="div-custom">     
+          <h5>Your Department's Annual progress.</h5>
+         <div id="chart_div_rating_annual" style="height:250px; width:250px;"></div>
+       
+        </div>
+        <form>
+          <div>
+            <label for="name">Rating 2</label>
+            <div class="foo blue"></div>
+          </div>
+          <div>
+            <label for="lastname">Rating 3</label>
+            <div class="foo purple"> </div>
+          </div>
+          <div>
+            <label for="lastname">Rating 4</label>
+            <div class="foo wine"> </div>
+          </div>
+          
+        </form>
+      </mat-grid-tile> 
+      
+      
+      </mat-grid-list> 
+     
+  
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+  </div>

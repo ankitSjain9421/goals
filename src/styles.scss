@@ -1,0 +1,50 @@
+//@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import '~@angular/material/theming';
+@include mat-core();
+// below defines your custom color to build a theme palette from
+$my-red:(
+    rgb(231, 0, 10)
+);
+$my-red: (
+  50: rgb(231, 0, 10),
+  100: rgb(231, 0, 10),
+  200:  rgb(231, 0, 10),
+  300:  rgb(231, 0, 10),
+  400:   rgb(231, 0, 10),
+  500: white,
+  600: #7faedd,
+  700: #7faedd,
+  800: #7faedd,
+  900: #7faedd,
+  A100: #7faedd,
+  A200: #7faedd,
+  A400: #7faedd,
+  A700: #7faedd,
+  contrast: (
+    50: rgb(231, 0, 10),
+    100:rgb(231, 0, 10),
+    200: rgb(231, 0, 10),
+    300: rgb(231, 0, 10),
+    400: rgb(231, 0, 10),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+// below creates a primary palette with three shades of blue
+$my-app-primary: mat-palette($my-red, 100, 50, 200);
+//$my-app-primary: mat-palette($mat-blue-grey);
+$my-app-accent:  mat-palette($my-red, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent)};

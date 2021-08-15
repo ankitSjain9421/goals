@@ -1,0 +1,185 @@
+<!--<div id="container">
+    <div id="body"><router-outlet></router-outlet></div>
+ </div> -->
+ 
+
+
+ 
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container" data-aos="fade-in">
+      <h1>Welcome to Goals Planner</h1>
+      <h2>Setting goals is the first step in turning the invisible into the visible</h2>
+      <div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#services" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-4 col-lg-5" >
+            <div class="content">
+              <h3>Choose Your Department to set Key Performance Indicator (KPI).</h3>
+              <p>
+                Key Performance Indicators can help you quantify your progress, measure incremental success and reach your goals,
+				By measuring these KPIs,you can pivot strategies and make critical adjustments to ensure success.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-lg-7 d-flex">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch"  data-aos-delay="100">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Clarity</h4>
+                    <p>Be focused and set SMART goals</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch"  data-aos-delay="200">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Commitment</h4>
+                    <p>Set milestones and create habits</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch"  data-aos-delay="300">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Celebration</h4>
+                    <p>Recognize small wins</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" >
+          <h2>Departments</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6" >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('1')"><i class="bi bi-briefcase"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('1')">Information technology</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('1')">Information Technology is at the core of how you do you business and how your business model itself evolves.</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('2')"><i class="bi bi-card-checklist"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('2')">HR and Learning & Development</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('2')">Human Resources and Learning and Development within an organisation are both aimed at developing people and talent.</a> </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6"  >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('3')"><i class="bi bi-bar-chart"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('3')">Admin</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('3')">Administration department is backbone of an organization. An effective administrator is an asset to an organization.</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('4')"><i class="bi bi-binoculars"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('4')">Finance</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('4')">Finance is one of the major pillars of any organisation and an essential ingredient to a successful business.</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('5')"><i class="bi bi-brightness-high"></i></a></div>
+              <h4 class="title"><a  style="cursor: pointer;" (click)="onDepartmentClick('5')">Quality</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('5')">Quality products help to maintain customer satisfaction and loyalty and reduce the risk and cost of replacing faulty goods.</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('6')"><i class="bi bi-calendar4-week"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('6')">Quality Control</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('6')">Quality control (QC) is a process by which entities review the quality of all factors involved in production.</a></p>
+            </div>
+          </div>
+		      <div class="col-lg-4 col-md-6" >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('7')"><i class="bi bi-briefcase"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('7')">Production</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('7')">A production department's role is to ensure the process of turning raw materials into products is performed efficiently and accurately. </a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('8')"><i class="bi bi-card-checklist"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('8')">SHE</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('8')"></a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6"  >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('9')"><i class="bi bi-bar-chart"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('9')">Engineering & Projects</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('9')">Design is not how it looks like and feels like. Design is how it works</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('10')"><i class="bi bi-binoculars"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('10')">PD Lab & AD Lab</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('10')">Understanding the contributions that the laboratory can make in product/process development, process improvement, market surveil lance and general business is key to the pharmaceutical business today.</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" >
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('11')"><i class="bi bi-brightness-high"></i></a></div>
+              <h4 class="title"><a  style="cursor: pointer;" (click)="onDepartmentClick('11')">Warehouse & Logictics</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('11')">Warehouse logistics, encompasses all the varied, complex factors – organization, movements, and management – involved in warehousing.</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('12')"><i class="bi bi-calendar4-week"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('12')">Project Management</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('12')">Project management is a discipline that can be applied to all industries, regardless of the product or service they are designed to deliver.</a></p>
+            </div>
+          </div>
+		    <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('13')"><i class="bi bi-calendar4-week"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('13')">Purchase</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('13')">Purchase departments help keep organizations financially healthy. They procure goods and services designed to meet operational needs while providing the highest possible value. </a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><a style="cursor: pointer;" (click)="onDepartmentClick('14')"><i class="bi bi-calendar4-week"></i></a></div>
+              <h4 class="title"><a style="cursor: pointer;" (click)="onDepartmentClick('14')">Operational Excellence</a></h4>
+              <p class="description"><a style="cursor: pointer;" (click)="onDepartmentClick('14')">Operational Excellence is the execution of the business strategy more consistently and reliably than the competition. </a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+   

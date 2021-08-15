@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+     
+      <mat-icon ><span style="color: white;" >menu</span></mat-icon>
+    </button>
+    <h1  (click)="goHome()" class="pointer"><span style="color: white;" >Goals & KPIs</span></h1>
+    <span class="menu-spacer"></span>
+    <!-- <div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a mat-button  (click)="goToDepartment(depatrment-1)" > Department-1 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button  (click)="goToDepartment(depatrment-2)">  Department-2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button   (click)="goToDepartment(depatrment-3)" >  Department-3 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button  (click)="goToDepartment(depatrment-4)" >  Department-4 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button   (click)="goToDepartment(depatrment-5)" >  Department-5 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button  (click)="goToDepartment(depatrment-6)">  Department-6 </a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a mat-button  (click)="goToDepartment(depatrment-7)" >  Department-7 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button  (click)="goToDepartment(depatrment-8)"> Department-8</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button  (click)="goToDepartment(depatrment-9)" >  Department-9 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button  (click)="goToDepartment(depatrment-10)">  Department-10</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button  (click)="goToDepartment(depatrment-11)" >  Department-11 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a mat-button  (click)="goToDepartment(depatrment-12)">  Department-12 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+    </div> -->
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-progress-spinner  *ngIf="isLoaderEnable" class="spinner" mode="indeterminate"></mat-progress-spinner>

@@ -1,0 +1,104 @@
+
+     <a [routerLink]="['']" style="margin-bottom:10px;"
+     class="previous pointer">Home</a> &nbsp;&nbsp;
+  
+
+     <div>
+ 
+
+      <mat-grid-list cols="2" rowHeight="1:1"> 
+      
+        <mat-grid-tile >
+         <div class="div-custom">     
+         <h5>Dashboard reflecting {{EmployeeName}}'s progress.</h5>
+        <div id="chart_div" style="height:500px; width:100%;"></div>
+      </div>
+        </mat-grid-tile> 
+        <mat-grid-tile>
+        <div class="div-custom">     
+          <h5>Dashboard reflecting {{EmployeeName}}'s Mid Year progress.</h5>
+         <div id="chart_div_rating_mid" style="height:500px; width:100%;"></div>
+       
+       </div>
+       <form>
+        <div>
+          <label for="name">Rating 2</label>
+          <div class="foo blue"></div>
+        </div>
+        <div>
+          <label for="lastname">Rating 3</label>
+          <div class="foo purple"> </div>
+        </div>
+        <div>
+          <label for="lastname">Rating 4</label>
+          <div class="foo wine"> </div>
+        </div>
+        
+      </form>
+        </mat-grid-tile> 
+       
+        
+        </mat-grid-list> 
+       
+    
+        <mat-grid-list cols="2" rowHeight="1:1"> 
+      
+         
+          <mat-grid-tile colspan="1">
+            <div class="div-custom">     
+          <h5>Dashboard reflecting {{EmployeeName}}'s Annual progress.</h5>
+         <div id="chart_div_rating_annual" style="height:500px; width:100%;"></div>
+        
+    
+         </div>
+         <form>
+          <div>
+            <label for="name">Rating 2</label>
+            <div class="foo blue"></div>
+          </div>
+          <div>
+            <label for="lastname">Rating 3</label>
+            <div class="foo purple"> </div>
+          </div>
+          <div>
+            <label for="lastname">Rating 4</label>
+            <div class="foo wine"> </div>
+          </div>
+          
+        </form>
+          </mat-grid-tile> 
+          
+          
+          </mat-grid-list> 
+         
+      
+      </div>
+      <div class="container">
+        <h2>Average self rating for Mid and Annual Assessment</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Particulars</th>
+              <th>Mid Year Assessment</th>
+              <th>Annual Assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Self score</td>
+              <td>{{midScore}}/{{numOfKpis}}</td>
+              <td>{{annualScore}}/{{numOfKpis}}</td>
+            </tr>
+            <tr>
+              <td>Average Rating</td>
+              <td>{{midScore/numOfKpis}}</td>
+              <td>{{annualScore/numOfKpis}}</td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+  <br>
+<a (click)="onPrevious()" class="previous pointer">&laquo; Previous</a>
+
+

@@ -1,0 +1,144 @@
+<!-- dialog-box.component.html -->
+
+<div mat-dialog-content>
+  <form  #postForm="ngForm">
+ <!-- <mat-form-field *ngIf="action != 'Delete'; else elseTemplate">
+    <input name="Department" required class="placeholder-text" placeholder=" Department" matInput [(ngModel)]="local_data.Department">
+    <mat-error *ngIf="(postForm.form.get('Department')?.invalid)">please enter Department</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+  <mat-form-field *ngIf="action != 'Delete'">
+    <input name="Relevance" required class="placeholder-text" placeholder=" Relevance" matInput [(ngModel)]="local_data.Relevance">
+    <mat-error *ngIf="(postForm.form.get('Relevance')?.invalid)">please enter Relevance</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field *ngIf="action != 'Delete'">
+    <input  name="Code" required class="placeholder-text" placeholder=" Code" matInput [(ngModel)]="local_data.Code">
+    <mat-error *ngIf="(postForm.form.get('Code')?.invalid)">please enter Code</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field *ngIf="action != 'Delete'">
+    <input  name="Core_x0020_Values" required class="placeholder-text" placeholder=" Core Values" matInput [(ngModel)]="local_data.Core_x0020_Values">
+    <mat-error *ngIf="postForm.form.get('Core_x0020_Values')?.invalid">please enter Core Values</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field  name="Levels" *ngIf="action != 'Delete'">
+   <!--<input name="Levels" required class="placeholder-text" placeholder=" Levels" matInput [(ngModel)]="local_data.Levels">--> 
+    <mat-label>Select Level</mat-label>
+    <mat-select required class="placeholder-text" name="Levels" [(ngModel)]="local_data.Levels">
+      <mat-option  *ngFor="let Level of Levels" [value]="Level.value">
+        {{Level.viewValue}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="postForm.form.get('Levels')?.invalid">please enter Level</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field *ngIf="action != 'Delete'">
+    <input name="Category" required class="placeholder-text" placeholder=" Category" matInput [(ngModel)]="local_data.Category">
+    <mat-error *ngIf="postForm.form.get('Category')?.invalid">please enter Category</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field *ngIf="action != 'Delete'">
+  <!--<input type="text" name="KPI"  required class="placeholder-text" placeholder=" KPI" matInput [(ngModel)]="local_data.KPI">-->  
+  <textarea rows="4" cols="20" name="usrtxt" wrap="hard" name="KPI"  required class="placeholder-text" placeholder=" KPI" matInput [(ngModel)]="local_data.KPI"></textarea>
+  <mat-error *ngIf="postForm.form.get('KPI')?.invalid">please enter KPI</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field *ngIf="action != 'Delete'">
+    <input name="Impact" required class="placeholder-text" placeholder=" Impact/Output" matInput [(ngModel)]="local_data.Impact">
+    <mat-error *ngIf="postForm.form.get('Impact')?.invalid">please enter Impact/Output</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field *ngIf="action != 'Delete'">
+    <input name="Plan" required class="placeholder-text" placeholder=" Plan" matInput [(ngModel)]="local_data.Plan">
+    <mat-error *ngIf="postForm.form.get('Plan')?.invalid">please enter Plan</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field *ngIf="action != 'Delete'">
+    <input name="Weightage" required class="placeholder-text" placeholder=" Weightage" matInput [(ngModel)]="local_data.Weightage">
+    <mat-error *ngIf="postForm.form.get('Weightage')?.invalid">please enter Weightage</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field *ngIf="action != 'Delete'">
+    <input name="Metric" required class="placeholder-text" placeholder=" Metric" matInput [(ngModel)]="local_data.Metric">
+    <mat-error *ngIf="postForm.form.get('Metric')?.invalid">please enter Metric</mat-error>
+  </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field  name="status" *ngIf="action != 'Delete'">
+    <!--<input name="Levels" required class="placeholder-text" placeholder=" Levels" matInput [(ngModel)]="local_data.Levels">--> 
+     <mat-label>Select status</mat-label>
+     <mat-select required class="placeholder-text" name="status" [(ngModel)]="local_data.status">
+       <mat-option  *ngFor="let stat of status" [value]="stat.value">
+         {{stat.viewValue}}
+       </mat-option>
+     </mat-select>
+     <mat-error *ngIf="postForm.form.get('Levels')?.invalid">please enter status</mat-error>
+   </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<mat-form-field *ngIf="action != 'Delete'">
+  <input name="RatingDefination" required class="placeholder-text" placeholder=" Rating Defination for 2" matInput [(ngModel)]="local_data.RatingDefination">
+  <mat-error *ngIf="postForm.form.get('RatingDefination')?.invalid">please enter Rating Defination for 2</mat-error>
+</mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <mat-form-field *ngIf="action != 'Delete'">
+  <input name="RatingDefinationThree" required class="placeholder-text" placeholder=" Rating Defination for 3" matInput [(ngModel)]="local_data.RatingDefinationThree">
+  <mat-error *ngIf="postForm.form.get('RatingDefinationThree')?.invalid">please enter Rating Defination for 3</mat-error>
+</mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <mat-form-field *ngIf="action != 'Delete'">
+  <input name="RatingDefinationFour" required class="placeholder-text" placeholder=" Rating Defination for 4" matInput [(ngModel)]="local_data.RatingDefinationFour">
+  <mat-error *ngIf="postForm.form.get('RatingDefinationFour')?.invalid">please enter Rating Defination for 4</mat-error>
+</mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <mat-form-field *ngIf="action != 'Delete'">
+  <!--<input name="Time" required class="placeholder-text" placeholder="Time" matInput [(ngModel)]="local_data.Time">-->
+  <mat-label> Target Date </mat-label>  
+  <input required class="placeholder-text" matInput name="Time" [(ngModel)]="local_data.Time" #resultPickerModel="ngModel" [matDatepicker] = "picker">  
+  <mat-datepicker-toggle matSuffix [for] = "picker"> </mat-datepicker-toggle>  
+  <mat-datepicker #picker color="warn"> </mat-datepicker>  
+  
+  <mat-error *ngIf="postForm.form.get('Time')?.invalid">please enter Time</mat-error>
+</mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<mat-form-field  name="MidYearRating" *ngIf="action != 'Delete'">
+  <!--<input name="Levels" required class="placeholder-text" placeholder=" Levels" matInput [(ngModel)]="local_data.Levels">--> 
+   <mat-label>Select Mid Year Self Rating</mat-label>
+   <mat-select  class="placeholder-text" name="MidYearRating" [(ngModel)]="local_data.MidYearRating">
+     <mat-option  *ngFor="let rat of ratings" [value]="rat.value">
+       {{rat.viewValue}}
+     </mat-option>
+   </mat-select>
+   
+ </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+
+ <mat-form-field  name="AnnualYearRating" *ngIf="action != 'Delete'">
+  <!--<input name="Levels" required class="placeholder-text" placeholder=" Levels" matInput [(ngModel)]="local_data.Levels">--> 
+   <mat-label>Select Annual Self Rating</mat-label>
+   <mat-select  class="placeholder-text" name="AnnualYearRating" [(ngModel)]="local_data.AnnualYearRating">
+     <mat-option  *ngFor="let rat of ratings" [value]="rat.value">
+       {{rat.viewValue}}
+     </mat-option>
+   </mat-select>
+   
+ </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div *ngIf="action != 'Delete'">
+  <ul style="list-style: none;">
+    <li *ngFor="let f of file">
+      <a (click)="deleteAttachment(f)" class="pointer"><i class="material-icons">delete_forever</i></a>
+      {{f}}
+      <span id="file-label">
+
+      </span>
+    </li>
+  </ul>
+  <button mat-button color="warn" (click)="onClick()">
+    <mat-icon>file_upload</mat-icon>
+    Upload *
+  </button>
+
+  <!--<input type="file" [(ngModel)]="local_data.file" required #fileInput id="fileUpload" name="file" multiple="" 
+    style="display:none;" />
+    <mat-error *ngIf="postForm.form.get('file')?.invalid">please upload Reference Document</mat-error>  --> 
+    <input type="file" [(ngModel)]="local_data.file"  #fileInput id="fileUpload" name="file" multiple="" 
+    style="display:none;" />
+   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <ng-template #elseTemplate>
+    Sure to delete this record ?
+  </ng-template>
+</form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction(postForm)">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
